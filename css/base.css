@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    font-family: Roboto, sans-serif;
+    font-size: 0.6rem;
+}
+
+h1 {
+    align-self: center;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+details > summary {
+    list-style: none;
+}
+
+details {
+    align-self: center;
+}
+
+details > .nav-dropdown-container {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+details[open] > .nav-dropdown-container {
+    animation: fade-in-down 500ms ease-out forwards;
+    pointer-events: auto;
+}
+
+.header-container {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    animation: fade-in-down 500ms ease-out forwards;
+    padding-bottom: 2em;
+    border-bottom: 2px solid black;
+}
+
+.header-container > h1 {
+    animation-delay: 150ms;
+}
+
+.header-container > details {
+    animation-delay: 300ms
+}
+
+.nav-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute
+}
+.nav-dropdown-container > a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+    margin-bottom: 1em;
+    font-size: 0.7rem;
+}
+
+.nav-dropdown-container > a:hover {
+    background-color: black;
+    color: white;
+}
+
+.hero-background-container {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / 3;
+    background-image: url(../assets/frost-background.jpg);
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
