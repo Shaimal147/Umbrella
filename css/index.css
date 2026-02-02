@@ -1,0 +1,16 @@
+.homepage .main-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+.homepage .hero-section-container {
+    font-weight: bold;
+    text-align: justify;
+    text-indent: 1.5rem;
+}
+
+.homepage .hero-section-container span {
+    background-image: url(../assets/frost-background.jpg);
+}
